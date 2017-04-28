@@ -1,0 +1,27 @@
+<h1>Attribute Directives</h1>
+<h2>ngClass / ngStyle</h2>
+
+<div [ngStyle]="{'background-color': color}"></div>
+
+<hr>
+<h2> Costum Attribute Directive</h2>
+<p appHighlight [defaultColor]="'blue'" [highlightColor]="'grey'">Ich bin hervorgehoben</p>
+<hr>
+<h1>Structure Directives</h1>
+<h2>*ngIf</h2>
+<div *ngIf="switch">Nicht immer zu sehen</div>
+<button (click)="switch = !switch" class="btn btn-primary">Switch</button>
+<hr>
+<h2>*ngFor</h2>
+<ul>
+  <li *ngFor="let element of elemente; let i = index">{{element}} - (Index: {{i}})</li>
+</ul>
+<hr>
+<h2>ngSwitch</h2>
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="10">10</p>
+  <p *ngSwitchCase="100">100</p>
+  <p *ngSwitchDefault>Irgendwas</p>
+</div>
+<h2>Unless Direvtive</h2>
+<div *appUnless="switch">Ist das zu sehen?</div>
