@@ -1,0 +1,32 @@
+# Webstorm Configs
+.idea/
+
+# Visual Studio Configs
+.vs/
+*.jsproj
+*.user
+*sln
+taco.json
+
+# Git
+.gitattributes
+
+# Konfigdatien
+node_modules/
+
+# iOS und Android
+platforms/
+
+# Cordova Plugins
+plugins/
+
+# Icons
+**/resources/ios/icon
+**/resources/android/icon
+**/resources/ios/splash
+**/resources/android/splash
+**/res/
+
+# Installed Extensions
+www/lib/
+lib/
