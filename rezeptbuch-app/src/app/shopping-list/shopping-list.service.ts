@@ -10,4 +10,16 @@ export class ShoppingListService {
   addIngredients(ingredients: Ingredient[]) {
     Array.prototype.push.apply(this.ingredients, ingredients);
   }
+
+  addIngredient(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+  }
+
+  deleteIngredient(ingredient: Ingredient) {
+    this.ingredients.slice(this.ingredients.indexOf(ingredient), 1);
+  }
+
+  editIngredient(oldIngredient: Ingredient, newIngredient: Ingredient) {
+    this.ingredients[this.ingredients.indexOf(oldIngredient)] = newIngredient;
+  }
 }

@@ -9,8 +9,17 @@ import {ShoppingListService} from "./shopping-list.service";
 })
 export class ShoppingListComponent implements OnInit {
   ingredients: Ingredient[] = [];
+  selectedIngredient: Ingredient;
 
   constructor(private slService: ShoppingListService) { }
+
+  onSelectItem(ingredient: Ingredient){
+    this.selectedIngredient = ingredient;
+  }
+
+  onCleared() {
+    this.selectedIngredient = null;
+  }
 
   ngOnInit() {
     this.ingredients = this.slService.getIngredients();
