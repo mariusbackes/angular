@@ -20,6 +20,7 @@ export class ReactiveComponent implements OnInit {
 
   onSubmit() {
     console.log(this.myForm);
+    this.myForm.reset();
   }
 
   onAddHobby() {
