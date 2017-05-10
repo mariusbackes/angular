@@ -1,7 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3 col-xs-12">
-      <app-reactive></app-reactive>
+      <h1>Pipes</h1>
+      {{ text | uppercase }}
+      <p>{{ date | date:'dd.MM.yy' }}</p>
+      <p>{{ text | slice:2:7 | uppercase }}</p>
+      <hr>
+      <input type="text" #input (keyup)="0">
+      <p>{{input.value | mulitply:3 }}</p>
+
+      <ul>
+        <li *ngFor="let element of list | filter: 'rot'"> {{element}}</li>
+      </ul>
+
+      <button class="btn btn-primary" (click)="list.push('Käsebrot')">Neues Element</button>
+      <hr>
+      <p>{{asyncvalue | async }}</p>
     </div>
   </div>
 </div>

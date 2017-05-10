@@ -22,6 +22,8 @@ import {UserDetailGuard} from "./user/user-detail.guard";
 import {UserEditGuard} from "./user/user-edit.guard";
 import {ReactiveComponent} from "./reactive/reactive.component";
 import {TemplateDrivenComponent} from "./template-driven/template-driven.component";
+import { MulitplyPipe } from './mulitply.pipe';
+import {FilterPipe} from "app/filter.pipe";
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import {TemplateDrivenComponent} from "./template-driven/template-driven.compone
     UserDetailComponent,
     UserEditComponent,
     TemplateDrivenComponent,
-    ReactiveComponent
+    ReactiveComponent,
+    MulitplyPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
