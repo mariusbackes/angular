@@ -24,6 +24,7 @@ import {ReactiveComponent} from "./reactive/reactive.component";
 import {TemplateDrivenComponent} from "./template-driven/template-driven.component";
 import { MulitplyPipe } from './mulitply.pipe';
 import {FilterPipe} from "app/filter.pipe";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import {FilterPipe} from "app/filter.pipe";
     BrowserModule,
     FormsModule,
     routing,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [LogService, UserDetailGuard, UserEditGuard],
   bootstrap: [AppComponent]
