@@ -5,7 +5,7 @@ import {ProtectedComponent} from "./protected/protected.component";
 import {ProtectedGuard} from "./protected/protected.guard";
 
 const APP_ROUTES: Routes = [
-  { path: '', redirectTo: 'signup', pathMatch: 'full'},
+  //{ path: '', redirectTo: 'signup', pathMatch: 'full'},
   { path: 'signup', component: SignupComponent},
   { path: 'signin', component: SigninComponent},
   { path: 'protected', component: ProtectedComponent, canActivate: [ProtectedGuard]}

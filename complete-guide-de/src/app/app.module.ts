@@ -31,6 +31,7 @@ import {SigninComponent} from "./unprotected/signin.component";
 import {SignupComponent} from "./unprotected/signup.component";
 import {AuthService} from "./shared/auth.service";
 import {ProtectedGuard} from "./protected/protected.guard";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
