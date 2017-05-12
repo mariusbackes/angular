@@ -25,6 +25,12 @@ import {TemplateDrivenComponent} from "./template-driven/template-driven.compone
 import { MulitplyPipe } from './mulitply.pipe';
 import {FilterPipe} from "app/filter.pipe";
 import {HttpModule} from "@angular/http";
+import {ProtectedComponent} from "./protected/protected.component";
+import {HeaderComponent} from "./shared/header.component";
+import {SigninComponent} from "./unprotected/signin.component";
+import {SignupComponent} from "./unprotected/signup.component";
+import {AuthService} from "./shared/auth.service";
+import {ProtectedGuard} from "./protected/protected.guard";
 
 @NgModule({
   declarations: [
@@ -45,16 +51,20 @@ import {HttpModule} from "@angular/http";
     TemplateDrivenComponent,
     ReactiveComponent,
     MulitplyPipe,
-    FilterPipe
+    FilterPipe,
+    HeaderComponent,
+    SigninComponent,
+    SignupComponent,
+    ProtectedComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
   ],
-  providers: [LogService, UserDetailGuard, UserEditGuard],
+  providers: [LogService, UserDetailGuard, UserEditGuard, AuthService, ProtectedGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

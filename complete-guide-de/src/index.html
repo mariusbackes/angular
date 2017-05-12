@@ -10,5 +10,19 @@
 </head>
 <body>
   <app-root>Loading...</app-root>
+
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script>
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyA0vgfpFwj4SJtyNou09f--5PRwNmKE7Go",
+          authDomain: "angular2-auth-cc601.firebaseapp.com",
+          databaseURL: "https://angular2-auth-cc601.firebaseio.com",
+          projectId: "angular2-auth-cc601",
+          storageBucket: "angular2-auth-cc601.appspot.com",
+          messagingSenderId: "804630663094"
+      };
+      firebase.initializeApp(config);
+  </script>
 </body>
 </html>
